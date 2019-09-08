@@ -2,7 +2,7 @@
 
 ## Usage
 
-1. Load the es6 module
+1. Load the es6 module.
 
     HTML:
     ```html
@@ -16,7 +16,7 @@
     })();
     ```
 
-2. Add the element to the DOM
+2. Add the element to the DOM.
 
     HTML:
     ```html
