@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Example 1</title></head>
+<style>
+html{width:100%;height:100%;background:#ddd;color:#333;font-size:calc(1vmin + 1vmax);margin:0;padding:0}
+body{
+  margin:0;padding:5em 1em 10em 1em;box-sizing:border-box;min-height:100%;min-width:100%;
+  display:grid;grid-template-columns:auto;grid-template-rows:min-content auto;
+  justify-content:center;justify-items;align-items:center;
+}
+div{font-size:3em;text-align:center}
+auto-complete{font-size:1em;margin:5em;width:28ch}
+</style>
+<body>
+<auto-complete></auto-complete>
+<div></div>
+<script>
+(async()=>{
+  await import('./autocomplete.mjs');
+  const el=document.querySelector("auto-complete");
+  const delay=(ms)=>new Promise(r=>{const t=setTimeout(()=>r(t),ms);});
+  el.options=async(value)=>{
+    await delay(Math.random()*5);
+    return [...new Array(Math.floor(Math.random()*15)).keys()].map(_=>{
+      const length=Math.floor(Math.random()*20);
+      const chars='  abcdefghijklmnopqrstuvwxyz  0123456789  ';
+      return [...new Array(length).keys()].map(_=>chars.charAt(Math.floor(Math.random()*chars.length))).join('');
+    }).sort().map(it=>`${value}${it}`);
+  };
+  el.submit=it=>document.querySelector('div').innerText=it;
+})();
+</script>
+</body>
+</html>
