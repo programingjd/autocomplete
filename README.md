@@ -74,3 +74,17 @@
       return await fetch.json();
     };
    ```
+
+4. Set up the submit action.
+
+    JAVASCRIPT:
+        
+    ```javascript 1.7
+    element.submit=value=>console.log(value);
+    ```
+    
+## Examples
+
+1. [Example 1](example1.html)
+2. [Example 2](example2.html)
+3. [Example 3](example3.html)
