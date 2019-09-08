@@ -44,17 +44,17 @@
      { text: 'Choice 2', value: 'choice2' },
      { text: 'Choice 3', value: 'choice3' } 
    ];
-    ```
+   ```
    
    Specify a function that returns a list of elements.
    
-       ```````javascript 1.7
+       ```javascript 1.7
        element.options=inputValue=>[
           `${inputValue} 1`,
           `${inputValue} 2`,
           `${inputValue} 3`,
        ];       
-       ```````
+       ```
    
        ```javascript 1.7
        element.options=inputValue=>{
