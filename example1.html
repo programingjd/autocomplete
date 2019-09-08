@@ -17,7 +17,7 @@ auto-complete{font-size:1em;margin:5em;width:28ch}
 <script>
 (async()=>{
   await import('./autocomplete.mjs');
-  const el=document.querySelector("auto-complete");
+  const el=document.querySelector('auto-complete');
   const format=new Intl.DateTimeFormat(navigator.language,{weekday:'long'});
   el.options=[0,1,2,3,4,5,6].map(it=>format.format(new Date(2000,7,10+it,0,0,0,0))).sort();
   el.submit=it=>document.querySelector('div').innerText=it;

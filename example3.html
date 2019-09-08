@@ -17,7 +17,7 @@ auto-complete{font-size:1em;margin:5em;width:28ch}
 <script>
 (async()=>{
   await import('./autocomplete.mjs');
-  const el=document.querySelector("auto-complete");
+  const el=document.querySelector('auto-complete');
   const delay=(ms)=>new Promise(r=>{const t=setTimeout(()=>r(t),ms);});
   el.options=async(value)=>{
     await delay(Math.random()*5);
