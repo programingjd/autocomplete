@@ -65,3 +65,12 @@
      ];
    };
    ```
+
+    Specify an async function that returns a list of elements.
+    
+    ```javascript 1.7
+    element.options=async inputValue=>{
+      const fetch=await fetch(`http://my_api/autocomplete/${encodeURIComponent(inputValue)}`);
+      return await fetch.json();
+    };
+   ```
