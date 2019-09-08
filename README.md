@@ -43,25 +43,25 @@
      { text: 'Choice 1', value: 'choice1' }, 
      { text: 'Choice 2', value: 'choice2' },
      { text: 'Choice 3', value: 'choice3' } 
-   ];
-   ```
+    ];
+    ```
    
    Specify a function that returns a list of elements.
    
-       ```javascript 1.7
-       element.options=inputValue=>[
-          `${inputValue} 1`,
-          `${inputValue} 2`,
-          `${inputValue} 3`,
-       ];       
-       ```
+   ```javascript 1.7
+   element.options=inputValue=>[
+     `${inputValue} 1`,
+     `${inputValue} 2`,
+     `${inputValue} 3`,
+   ];       
+   ```
    
-       ```javascript 1.7
-       element.options=inputValue=>{
-         return [ 
-           { text: `${inputValue} 1`, value: `${inputValue.toLowerCase()}1` }, 
-           { text: `${inputValue} 2` value: `${inputValue.toLowerCase()}2` },
-           { text: `${inputValue} 3`, value: `${inputValue.toLowerCase()}3` } 
-         ];
-       };
-       ```
+   ```javascript 1.7
+   element.options=inputValue=>{
+     return [ 
+       { text: `${inputValue} 1`, value: `${inputValue.toLowerCase()}1` }, 
+       { text: `${inputValue} 2` value: `${inputValue.toLowerCase()}2` },
+       { text: `${inputValue} 3`, value: `${inputValue.toLowerCase()}3` } 
+     ];
+   };
+   ```
