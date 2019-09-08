@@ -18,7 +18,7 @@ option{cursor:default;display:block;line-height:1.75;padding:.75em 2em .75em 1em
 option[value]{color:#666}
 option[value]:before{content:attr(value);font-weight:bold;font-size:1.05em;display:block;color:#222}
 option:hover,option:focus{outline:none;background:#eee}
-</style><div><input type="text" autocomplete="false"><slot></slot></input><datalist tabindex="0"></datalist></div>`;
+</style><div><input type="text" autocomplete="false"></input><datalist tabindex="0"></datalist></div>`;
 }
 connectedCallback(){
   this._input=this.shadowRoot.querySelector("input");
